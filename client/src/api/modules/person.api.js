@@ -8,10 +8,12 @@ const personEndpoints = {
 const personApi = {
   detail: async ({ personId }) => {
     try {
+      if (!personId || typeof personId !== "string" || personId.trim() === "") {
+        throw new Error("Invalid person ID");
+      }
       const response = await publicClient.get(
         personEndpoints.detail({ personId })
       );
-
       return { response };
     } catch (err) {
       return { err };
@@ -19,10 +21,12 @@ const personApi = {
   },
   medias: async ({ personId }) => {
     try {
+      if (!personId || typeof personId !== "string" || personId.trim() === "") {
+        throw new Error("Invalid person ID");
+      }
       const response = await publicClient.get(
         personEndpoints.medias({ personId })
       );
-
       return { response };
     } catch (err) {
       return { err };

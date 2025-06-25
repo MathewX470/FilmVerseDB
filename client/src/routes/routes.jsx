@@ -1,11 +1,11 @@
 import HomePage from "../pages/HomePage";
 import PersonDetail from "../pages/PersonDetail";
-import favoriteList from "../pages/FavoriteList";
+import FavoriteList from "../pages/FavoriteList";
 import MediaDetail from "../pages/MediaDetail";
 import MediaList from "../pages/MediaList";
 import MediaSearch from "../pages/MediaSearch";
-import passwordUpdate from "../pages/PasswordUpdate";
-import reviewList from "../pages/ReviewList";
+import PasswordUpdate from "../pages/PasswordUpdate";
+import ReviewList from "../pages/ReviewList";
 import ProtectedPage from "../components/common/ProtectedPage";
 
 export const routesGen = {
@@ -39,7 +39,7 @@ const routes = [
     path: "/password-update",
     element: (
       <ProtectedPage>
-        <passwordUpdate />
+        <PasswordUpdate />
       </ProtectedPage>
     ),
     state: "password.update",
@@ -48,7 +48,7 @@ const routes = [
     path: "/favorites",
     element: (
       <ProtectedPage>
-        <favoriteList />
+        <FavoriteList />
       </ProtectedPage>
     ),
     state: "favorite.list",
@@ -57,7 +57,7 @@ const routes = [
     path: "/reviews",
     element: (
       <ProtectedPage>
-        <reviewList />
+        <ReviewList />
       </ProtectedPage>
     ),
     state: "reviews",

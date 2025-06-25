@@ -20,7 +20,6 @@ const MediaItem = ({ media, mediaType }) => {
 
   useEffect(() => {
     setTitle(media.title || media.name || media.mediaTitle);
-
     setPosterPath(
       tmdbConfigs.posterPath(
         media.poster_path ||
@@ -29,7 +28,6 @@ const MediaItem = ({ media, mediaType }) => {
           media.profile_path
       )
     );
-
     if (mediaType === tmdbConfigs.mediaType.movie) {
       setReleaseDate(media.release_date && media.release_date.split("-")[0]);
     } else {
@@ -37,8 +35,8 @@ const MediaItem = ({ media, mediaType }) => {
         media.first_air_date && media.first_air_date.split("-")[0]
       );
     }
-
     setRate(media.vote_average || media.mediaRate);
+    //console.log("media.id:", media.id, "mediaType:", mediaType);
   }, [media, mediaType]);
 
   return (
@@ -58,10 +56,13 @@ const MediaItem = ({ media, mediaType }) => {
           color: "primary.contrastText",
         }}
       >
-        {/* movie or tv item */}
         {mediaType !== "people" && (
           <>
-            {favoriteUtils.check({ listFavorites, mediaId: media.id }) && (
+            {favoriteUtils.check({
+              listFavorites,
+              mediaId: media.id,
+              mediaType,
+            }) && (
               <FavoriteIcon
                 color="primary"
                 sx={{
@@ -116,9 +117,7 @@ const MediaItem = ({ media, mediaType }) => {
             >
               <Stack spacing={{ xs: 1, md: 2 }}>
                 {rate && <CircularRate value={rate} />}
-
                 <Typography>{releaseDate}</Typography>
-
                 <Typography
                   variant="body1"
                   fontWeight="700"
@@ -133,9 +132,6 @@ const MediaItem = ({ media, mediaType }) => {
             </Box>
           </>
         )}
-        {/* movie or tv item */}
-
-        {/* people */}
         {mediaType === "people" && (
           <Box
             sx={{
@@ -152,7 +148,6 @@ const MediaItem = ({ media, mediaType }) => {
             </Typography>
           </Box>
         )}
-        {/* people */}
       </Box>
     </Link>
   );

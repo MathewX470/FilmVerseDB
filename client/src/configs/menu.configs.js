@@ -15,7 +15,7 @@ const main = [
   },
   {
     display: "movies",
-    path: "/movies",
+    path: "/movie",
     icon: <SlideshowOutlinedIcon />,
     state: "movie",
   },
@@ -23,7 +23,7 @@ const main = [
     display: "tv series",
     path: "/tv",
     icon: <LiveTvOutlinedIcon />,
-    state: "homtve",
+    state: "tv",
   },
   {
     display: "search",
@@ -54,8 +54,6 @@ const user = [
   },
 ];
 
-const menuConfigs = {
-  main,
-  user,
-};
+const menuConfigs = { main, user };
+
 export default menuConfigs;
