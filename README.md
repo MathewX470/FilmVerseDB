@@ -59,17 +59,5 @@ npm start
 - Click any title to view details, cast, reviews
 - Login/signup to add to watchlist, or write reviews
 
-## 🧹 Folder Structure
-
-```
-FilmVerseDB/
-├── backend/ — Express API
-│   ├── src/
-│   ├── tests/
-│   └── .env
-└── frontend/ — React frontend
-    ├── public/
-    ├── src/
-```
 
 ⭐ *By MathewX470.*
