@@ -27,30 +27,7 @@ git clone https://github.com/MathewX470/FilmVerseDB.git
 cd FilmVerseDB
 ```
 
-### 2. Configure environment variables
-
-Create a `.env` file in both `backend/` and `frontend/` directories with the necessary keys:
-
-```dotenv
-# backend/.env
-TMDB_API_KEY=your_tmdb_key
-DB_URL=your_database_url
-JWT_SECRET=your_jwt_secret
-```
-
-### 3. Run in development mode
-
-```bash
-# Start the backend server
-cd backend
-npm run dev
-
-# In a new terminal, start the frontend server
-cd frontend
-npm start
-```
-
-### 4. Access the app
+### 2. Access the app
 
 ## ⚙️ Usage
 
