@@ -1,7 +1,7 @@
 import axios from "axios";
 import queryString from "query-string";
 
-const baseURL = "http://tmdb-movies-app-using-mern.vercel.app/api/v1";
+const baseURL = "https://tmdb-movies-app-using-mern.vercel.app/api/v1";
 
 const publicClient = axios.create({
   baseURL,
