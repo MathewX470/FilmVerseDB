@@ -72,11 +72,4 @@ FilmVerseDB/
     ├── src/
 ```
 
-
-## 📄 License
-
-This project is available under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
----
-
 ⭐ *By MathewX470.*
