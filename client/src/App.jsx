@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./components/layout/MainLayout";
 import routes from "./routes/routes";
 import PageWrapper from "./components/common/PageWrapper";
+import { Analytics } from '@vercel/analytics/react';
 
 import "react-toastify/dist/ReactToastify.css";
 import "swiper/css";
@@ -32,6 +33,9 @@ const App = () => {
 
       {/* MUI CSS reset */}
       <CssBaseline />
+
+      {/* Vercel Analytics */}
+      <Analytics />
 
       {/* App routing */}
       <BrowserRouter>
